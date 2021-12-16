@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         view.backgroundColor = .blue
     }
 
-
+    @IBAction func tapAction(_ sender: UIButton) {
+        #if DEBUG
+        sender.setTitle("DEBUG", for: .normal)
+        #else
+        sender.setTitle("RELEASE", for: .normal)
+        #endif
+    }
+    
 }
 
